@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../styles/landing.css";
 class Landing extends Component {
   render() {
@@ -10,7 +11,7 @@ class Landing extends Component {
             style={{ backgroundColor: `${color[user.id]}` }}
             className="user"
           >
-            {user.name}
+            <Link to="/catalog">{user.name}</Link>
           </div>
         ))}
       </div>

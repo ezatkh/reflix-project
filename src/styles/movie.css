@@ -1,0 +1,11 @@
+.imagesMovies{
+    width: 80%;
+    border-radius: 20px;
+    height: 100%;
+    max-height: 200px
+}
+.movieChild{
+    height: 300px;
+    width: 300px;
+}
+  

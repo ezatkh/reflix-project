@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Home from "./components/Home";
 import Catalog from "./components/Catalog";
 import Landing from "./components/Landing";
 import Movie from "./components/Movie";
@@ -71,21 +70,26 @@ class App extends Component {
         <div className="App">
           <div className="nav">
             <div className="Link">
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="Link">
               <Link to="/catalog">Catalog</Link>
             </div>
             <div className="logo">REFLIX</div>
           </div>
+
           <Route
             path="/"
             exact
             render={() => <Landing users={this.state.users} />}
           />
 
-          <Route path="/home" exact render={() => <Home />} />
-          <Route path="/catalog" exact render={() => <Catalog />} />
+          <Route
+            path="/catalog"
+            exact
+            render={() => <Catalog moviesInfo={this.state.moviesInfo} />}
+          />
+
           <Route path="/movies" exact render={() => <Movie />} />
           <Route
             path="/movies/:movieID"
