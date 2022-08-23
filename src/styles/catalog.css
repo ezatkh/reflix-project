@@ -1,6 +1,6 @@
 .catalogContainer{
     display: grid;
-    grid-template-rows: 1fr 10fr; 
+    grid-template-rows: 1fr 10fr 10fr; 
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 .movies{
@@ -11,7 +11,7 @@
 
 }
 input{
-    width: 90%;
+    width: 80%;
     height: 60%;
     border: 0;
     border-bottom: 3px solid #eb2f06;
@@ -36,4 +36,3 @@ label{
     color:  aliceblue;
     font-size: 20px;
 }
-.fa-plus {font-size: 3vh; }

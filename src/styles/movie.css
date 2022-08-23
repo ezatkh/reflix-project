@@ -8,4 +8,8 @@
     height: 300px;
     width: 300px;
 }
-  
+.fa-plus {
+    font-size: 3vh; 
+    position: relative; 
+    color: aliceblue;
+}

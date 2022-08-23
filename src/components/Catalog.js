@@ -19,6 +19,11 @@ class Catalog extends Component {
       moviesFiltered: moviesInfo,
     });
   };
+  isShown = () => {
+    var display = false;
+    if (this.state.movieRent.length) display = true;
+    return display;
+  };
   render() {
     return (
       <div className="catalogContainer">
@@ -28,16 +33,24 @@ class Catalog extends Component {
             value={this.state.movieInput}
             onChange={this.movieSearch}
           />
-          <span className="budget">Budget:</span>
+          <span className="budget">Budget:{this.props.user.budget}$</span>
+        </div>
+        <div
+          className="movieRent"
+          //  style={{ display: this.isShown() ? "block" : "none" }}
+        >
+          {this.props.rentedMovies.map((movie) => {
+            return <Movie movie={movie} />;
+          })}
         </div>
 
         <div className="movies">
           {this.state.moviesFiltered.length
             ? this.state.moviesFiltered.map((movie) => {
-                return <Movie movie={movie} />;
+                return <Movie movieRent={this.props.movieRent} movie={movie} />;
               })
             : this.props.moviesInfo.map((movie) => {
-                return <Movie movie={movie} />;
+                return <Movie movieRent={this.props.movieRent} movie={movie} />;
               })}
         </div>
       </div>
