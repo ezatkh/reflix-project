@@ -68,11 +68,19 @@ class App extends Component {
     let moviesRent = [...this.state.rented];
     let moviesChangeRent = [...this.state.moviesInfo];
     let user = this.state.users;
+    let index = 0;
     moviesChangeRent.map((movie) => {
       if (movie.id === movieRented.id && user[0].budget > 29) {
-        if (!movie.isRented) user[0].budget -= 30;
         movie.isRented = !movie.isRented;
-        moviesRent.push(movie);
+        if (!movie.isRented) {
+          moviesRent.splice(index, 1);
+          user[0].budget += 30;
+        } else {
+          moviesRent.push(movie);
+          user[0].budget -= 30;
+        }
+
+        index++;
       }
     });
     this.setState({

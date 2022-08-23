@@ -40,7 +40,7 @@ class Catalog extends Component {
           style={{ display: this.isShown() ? "block" : "none" }}
         >
           {this.props.rentedMovies.map((movie) => {
-            return <Movie movie={movie} />;
+            return <Movie movieRent={this.props.movieRent} movie={movie} />;
           })}
         </div>
 
