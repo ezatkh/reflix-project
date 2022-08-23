@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Catalog from "./components/Catalog";
 import Landing from "./components/Landing";
-import Movie from "./components/Movie";
 import MovieDetail from "./components/MovieDetail";
 class App extends Component {
   constructor() {
@@ -87,7 +86,12 @@ class App extends Component {
           <Route
             path="/catalog"
             exact
-            render={() => <Catalog moviesInfo={this.state.moviesInfo} />}
+            render={() => (
+              <Catalog
+                user={this.state.users[0]}
+                moviesInfo={this.state.moviesInfo}
+              />
+            )}
           />
 
           <Route
