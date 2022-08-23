@@ -70,16 +70,18 @@ class App extends Component {
     let user = this.state.users;
     let index = 0;
     moviesChangeRent.map((movie) => {
-      if (movie.id === movieRented.id && user[0].budget > 29) {
-        movie.isRented = !movie.isRented;
-        if (!movie.isRented) {
+      if (movie.id === movieRented.id) {
+        if (movie.isRented) {
           moviesRent.splice(index, 1);
           user[0].budget += 30;
+          movie.isRented = !movie.isRented;
         } else {
-          moviesRent.push(movie);
-          user[0].budget -= 30;
+          if (user[0].budget > 29) {
+            moviesRent.push(movie);
+            user[0].budget -= 30;
+            movie.isRented = !movie.isRented;
+          } else alert("Insufficient Funds");
         }
-
         index++;
       }
     });
