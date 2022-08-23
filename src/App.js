@@ -67,13 +67,16 @@ class App extends Component {
   movieRent = (movieRented) => {
     let moviesRent = [...this.state.rented];
     let moviesChangeRent = [...this.state.moviesInfo];
+    let user = this.state.users;
     moviesChangeRent.map((movie) => {
-      if (movie.id === movieRented.id) {
+      if (movie.id === movieRented.id && user[0].budget > 29) {
+        if (!movie.isRented) user[0].budget -= 30;
         movie.isRented = !movie.isRented;
         moviesRent.push(movie);
       }
     });
     this.setState({
+      users: user,
       moviesInfo: moviesChangeRent,
       rented: moviesRent,
     });

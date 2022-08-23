@@ -21,7 +21,7 @@ class Catalog extends Component {
   };
   isShown = () => {
     var display = false;
-    if (this.state.movieRent.length) display = true;
+    if (this.props.rentedMovies.length) display = true;
     return display;
   };
   render() {
@@ -37,7 +37,7 @@ class Catalog extends Component {
         </div>
         <div
           className="movieRent"
-          //  style={{ display: this.isShown() ? "block" : "none" }}
+          style={{ display: this.isShown() ? "block" : "none" }}
         >
           {this.props.rentedMovies.map((movie) => {
             return <Movie movie={movie} />;
