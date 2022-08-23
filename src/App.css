@@ -1,3 +1,33 @@
-.App {
-  text-align: center;
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #1e272e;
+  height: 100%;
+}
+.App{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+a{
+  color: aliceblue;
+  text-decoration:none;
+}
+a:hover {
+  color: wheat;
+}
+.Link{
+  margin: 10px;
+  display: inline-block;
+  font-size: 24px;
+}
+.logo{
+  font-weight: bold;
+  font-size: 24px;
+  background: -webkit-linear-gradient(#eb2f06, #480719);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Catalog from "./components/Catalog";
 import Landing from "./components/Landing";
@@ -10,6 +10,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      users: [
+        { name: "Ezat", budget: 100, id: 1 },
+        { name: "Mohammad", budget: 200, id: 2 },
+        { name: "Karam", budget: 200, id: 3 },
+        { name: "Ali", budget: 150, id: 4 },
+      ],
       moviesInfo: [
         {
           id: 0,
@@ -63,10 +69,24 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route path="/" exact render={() => <Home />} />
+          <div className="nav">
+            <div className="Link">
+              <Link to="/home">Home</Link>
+            </div>
+            <div className="Link">
+              <Link to="/catalog">Catalog</Link>
+            </div>
+            <div className="logo">REFLIX</div>
+          </div>
+          <Route
+            path="/"
+            exact
+            render={() => <Landing users={this.state.users} />}
+          />
+
+          <Route path="/home" exact render={() => <Home />} />
           <Route path="/catalog" exact render={() => <Catalog />} />
-          <Route path="/landing" exact render={() => <Landing />} />
-          <Route path="/landing" exact render={() => <Movie />} />
+          <Route path="/movies" exact render={() => <Movie />} />
           <Route
             path="/movies/:movieID"
             exact
