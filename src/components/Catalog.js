@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import "../styles/catalog.css";
 import Movie from "./Movie";
+import { Link } from "react-router-dom";
 class Catalog extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   render() {
     return (
       <div className="catalogContainer">
@@ -17,7 +14,11 @@ class Catalog extends Component {
 
         <div className="movies">
           {this.props.moviesInfo.map((movie) => {
-            return <Movie movie={movie} />;
+            return (
+              <Link to={`/movies/${movie.id}`}>
+                <Movie movie={movie} />
+              </Link>
+            );
           })}
         </div>
       </div>

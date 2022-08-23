@@ -1,0 +1,14 @@
+.movieDetail{
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    color: aliceblue;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.movieDetailImage{
+ max-height: 450px;
+}
+p{
+    margin: 20px;
+}

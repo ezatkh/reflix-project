@@ -90,7 +90,6 @@ class App extends Component {
             render={() => <Catalog moviesInfo={this.state.moviesInfo} />}
           />
 
-          <Route path="/movies" exact render={() => <Movie />} />
           <Route
             path="/movies/:movieID"
             exact

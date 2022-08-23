@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 1fr 10fr; 
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
-
 }
 .movies{
    display: flex;
