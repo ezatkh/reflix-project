@@ -8,12 +8,16 @@ class Movie extends Component {
     this.props.movieRent(movieParser);
   };
   render() {
+    let rent = this.props.movie.isRented;
+    let icon;
+    if (rent) icon = "fa fa-minus";
+    else icon = "fa fa-plus";
     return (
       <div className="movieChild">
         <Link to={`/movies/${this.props.movie.id}`}>
           <img className="imagesMovies" src={this.props.movie.img} />
         </Link>
-        <i onClick={this.movieRentToggle} class="fa fa-plus"></i>
+        <i onClick={this.movieRentToggle} class={icon}></i>
       </div>
     );
   }
