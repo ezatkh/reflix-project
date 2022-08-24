@@ -9,7 +9,10 @@
     width: 300px;
 }
 .fa {
-    font-size: 3vh; 
+    font-size:calc(12px + 1.5vw);
     position: relative; 
     color: aliceblue;
 }
+.fa:hover {
+    color: wheat;
+  }

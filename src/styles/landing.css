@@ -1,28 +1,22 @@
 .container{
-    height: 90%;
-    width: 95%;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-template-areas: "u,u,u,u";
+
+    display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: space-evenly;
-    justify-items: center;
-    align-items: center;
-    row-gap: 20px;
-    column-gap: 20px;
-    margin-left: 2%;
-    margin-right: 5%;
+    margin-top: 10%;
 }
 .user{
-    grid-area: "u";
-    display: grid;
-    justify-content: center ;
-    align-content: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 125px;
     color: blanchedalmond; 
-    font-size:2vw;
+    font-size:calc(22px + 0.6vw);
     font-weight: bold;
     border-radius: 25px;
-    width: 100%;
-    height: 25%;
+
     border-style: inset;
     cursor: pointer;
 }

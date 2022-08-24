@@ -1,5 +1,5 @@
 .movieDetail{
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: 'DynaPuff', cursive;
     color: aliceblue;;
     display: flex;
     flex-direction: column;
@@ -11,4 +11,6 @@
 }
 p{
     margin: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 }

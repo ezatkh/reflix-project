@@ -1,7 +1,9 @@
 body{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #1e272e;
-  height: 100%;
+  font-family: 'DynaPuff', cursive;
+  background-color: #131618;
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
+  radial-gradient(#131618 2px, transparent 0);
+background-size: 30px 30px, 30px 30px;
 }
 .App{
   position: absolute;

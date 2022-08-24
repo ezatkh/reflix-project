@@ -1,17 +1,19 @@
 .catalogContainer{
-    display: grid;
-    grid-template-rows: 1fr 5fr 10fr; 
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    display: flex;
+    flex-direction: column; 
+    margin-left: 2%;
+    font-family: 'DynaPuff', cursive;
+    color: aliceblue;
 }
 .movies{
    display: flex;
    flex-wrap: wrap;
    margin-left:3%;
    justify-content: center;
-
 }
 input{
-    width: 80%;
+    font-family: 'DynaPuff', cursive;
+    width: 75%;
     height: 60%;
     border: 0;
     border-bottom: 3px solid #eb2f06;
@@ -23,9 +25,10 @@ input{
     
 }
 .input{
+
     margin-right: 2%;
     margin-left: 2%;
-    font-size: 20px;
+    font-size:calc(12px + 1.5vw);
     margin-bottom: 2%;
 }
 label{
@@ -35,5 +38,15 @@ label{
     margin-left: 10px;
     color:  aliceblue;
     font-size: 20px;
+}
+.head{
+    font-size:calc(14px + 1.5vw);
+}
+.movieRent{
+    display: flex;
+    border-radius: 10px;
+    border-bottom: 3px solid #131618;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 

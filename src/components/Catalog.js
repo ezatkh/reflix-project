@@ -33,17 +33,18 @@ class Catalog extends Component {
             value={this.state.movieInput}
             onChange={this.movieSearch}
           />
-          <span className="budget">Budget:{this.props.user.budget}$</span>
+          <span className="budget">Budget: {this.props.user.budget}$</span>
         </div>
-        <div
-          className="movieRent"
-          style={{ display: this.isShown() ? "block" : "none" }}
-        >
-          {this.props.rentedMovies.map((movie) => {
-            return <Movie movieRent={this.props.movieRent} movie={movie} />;
-          })}
-        </div>
+        <div style={{ display: this.isShown() ? "flex" : "none" }}>
+          <p className="head">Rented:</p>
 
+          <div className="movieRent">
+            {this.props.rentedMovies.map((movie) => {
+              return <Movie movieRent={this.props.movieRent} movie={movie} />;
+            })}
+          </div>
+        </div>
+        <p className="head">Movies:</p>
         <div className="movies">
           {this.state.moviesFiltered.length
             ? this.state.moviesFiltered.map((movie) => {
